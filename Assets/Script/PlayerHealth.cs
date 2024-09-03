@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public GameObject player;
-    public AudioSource damageSound;
-    public AudioSource dieSound;
     private Animator anim;
 
     public int Health = 5;
@@ -23,13 +21,14 @@ public class PlayerHealth : MonoBehaviour
     public void onDamage()
     {
         Health -= 1;
+
         if (Health <= 0)
         {
-                dieSound.Play();
+            SoundManager.instance.Die_Play();
         }
         else
         {
-                damageSound.Play();
+            SoundManager.instance.Damage_Play();
         }
     }
 

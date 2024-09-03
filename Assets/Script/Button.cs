@@ -5,15 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
-    AudioSource audioSource;
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
     public void StartGame()
     {
         Time.timeScale = 1;
-        audioSource.Play();
+        SoundManager.instance.ButtonBullet_Play();
         Invoke("StartGameload", 2.2f);
         GameObject.Find("Canvas").transform.Find("Bullet").gameObject.SetActive(true);
     }
@@ -25,13 +20,13 @@ public class Button : MonoBehaviour
     
     public void Next()
     {
-        audioSource.Play();
+        SoundManager.instance.ButtonNext_Play();
         SceneManager.LoadScene("Explanation2");
     }
 
     public void GameStart()
     {
-        audioSource.Play();
+        SoundManager.instance.ButtonBullet_Play();
         Invoke("GameStartload", 2.2f);
         GameObject.Find("Canvas").transform.Find("Panel").transform.Find("bullet").gameObject.SetActive(true);
     }
@@ -52,7 +47,7 @@ public class Button : MonoBehaviour
 
     public void Option()
     {
-        audioSource.Play();
+        SoundManager.instance.ButtonNext_Play();
         GameObject.Find("Canvas").transform.Find("Option").gameObject.SetActive(true);
     }
 
@@ -63,7 +58,7 @@ public class Button : MonoBehaviour
 
     public void Stage01_01()
     {
-        audioSource.Play();
+        SoundManager.instance.ButtonBullet_Play();
         GameObject.Find("Canvas").transform.Find("Clear").transform.Find("Stage01_01").transform.Find("bullet").gameObject.SetActive(true);
         StartCoroutine(Stage01_01load());
     }
@@ -76,7 +71,7 @@ public class Button : MonoBehaviour
     }
     public void Stage01_02()
     {
-        audioSource.Play();
+        SoundManager.instance.ButtonBullet_Play();
         GameObject.Find("Canvas").transform.Find("Clear").transform.Find("Stage01_02").transform.Find("bullet").gameObject.SetActive(true);
         StartCoroutine(Stage01_02load());
     }
@@ -89,7 +84,7 @@ public class Button : MonoBehaviour
 
     public void Stage01_01_01()
     {
-        audioSource.Play();
+        SoundManager.instance.ButtonBullet_Play();
         GameObject.Find("Canvas").transform.Find("Clear").transform.Find("Stage01_01_01").transform.Find("bullet").gameObject.SetActive(true);
         StartCoroutine(Stage01_01_01load());
     }
@@ -102,7 +97,7 @@ public class Button : MonoBehaviour
 
     public void Stage02()
     {
-        audioSource.Play();
+        SoundManager.instance.ButtonBullet_Play();
         GameObject.Find("Canvas").transform.Find("Clear").transform.Find("Stage02").transform.Find("bullet").gameObject.SetActive(true);
         StartCoroutine(Stage02load());
     }

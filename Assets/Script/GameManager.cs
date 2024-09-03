@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public AudioSource stageBgm;
-
     public GameObject Clear;
     public GameObject GameoverText;
     public Image Dash;
@@ -33,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     public int itemX1, itemX2, itemY1, itemY2;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         Time.timeScale = 1;
@@ -133,7 +131,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        stageBgm.Stop();
+        //stageBgm.Stop();
 
         isDead = true;
 

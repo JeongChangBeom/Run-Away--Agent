@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2145240706471437830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2145240706471437944}
+  - component: {fileID: 2145240706471437831}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2145240706471437944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145240706471437830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 524.4372, y: 436.9262, z: -4.7156143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2145240706471437831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145240706471437830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95eb7162928ebf3449723b5c81e6b670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bgm: {fileID: 0}
+  Menu: {fileID: 8300000, guid: f2865d0dbe1bc054bb20ad112d9e20d6, type: 3}
+  Stage01: {fileID: 8300000, guid: 9e7fe7b085e847a4e9c28cd89cbdb946, type: 3}
+  Stage01_01: {fileID: 8300000, guid: 9108653152aeb0648be2c3cf2a63cdb4, type: 3}
+  Stage01_01_01: {fileID: 8300000, guid: d4d70e8cde24c7c429ac9d77d5f31827, type: 3}
+  Stage01_02: {fileID: 8300000, guid: 7dac893a27d685e4d846acf736e532ea, type: 3}
+  Stage02: {fileID: 8300000, guid: 9e2382d3603f1754086929ab5bcc7612, type: 3}
+  ButtonBullet_Audio: {fileID: 0}
+  ButtonBullet: {fileID: 8300000, guid: 770c0a246119bc9408721ff3aa80a338, type: 3}
+  ButtonNext_Audio: {fileID: 0}
+  ButtonNext: {fileID: 8300000, guid: c4418c18ba714914c97cc6ccae6c7cb9, type: 3}
+  Damage_Audio: {fileID: 0}
+  Damage: {fileID: 8300000, guid: c82b0f68b163f944cb586c5c4379866e, type: 3}
+  Die_Audio: {fileID: 0}
+  Die: {fileID: 8300000, guid: 4960e6b7f81b8e84fa303b8a4cc881af, type: 3}
+  Move_Audio: {fileID: 0}
+  Move: {fileID: 8300000, guid: b1052296478d6624e984f251e9eebfb7, type: 3}
+  Sliding_Audio: {fileID: 0}
+  Sliding: {fileID: 8300000, guid: 4e419ad67b49f344a9c79150192da199, type: 3}
+  Attack_Audio: {fileID: 0}
+  Attack: {fileID: 8300000, guid: 7c34ee39eccf4c54ba97492a1eae3f6b, type: 3}
+  Barrier_Audio: {fileID: 0}
+  Barrier: {fileID: 8300000, guid: e77e45357aaea094793a8e455443d16a, type: 3}

@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    AudioSource moveSound;
-    public AudioSource slidingSound;
-    public AudioSource attackSound;
-
     private Animator anim;
     public Animator attackanimator_up;
     public Animator attackanimator_down;
@@ -40,7 +36,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        moveSound = GetComponent<AudioSource>();
         playerhealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
         anim = GetComponent<Animator>();
         activeMoveSpeed = moveSpeed;
@@ -65,16 +60,13 @@ public class PlayerController : MonoBehaviour
 
         if ((moveInput.x != 0 || moveInput.y != 0) && playerhealth.Health > 0)
         {
-            if (!moveSound.isPlaying)
-            {
-                moveSound.Play();
-            }
+            SoundManager.instance.Move_Play();
 
             anim.SetBool("isMove", true);
         }
         else
         {
-            moveSound.Stop();
+            SoundManager.instance.Move_Stop();
 
             anim.SetBool("isMove", false);
         }
@@ -107,22 +99,22 @@ public class PlayerController : MonoBehaviour
 
                 if (moveInput.y < 0)
                 {
-                    slidingSound.Play();
+                    SoundManager.instance.Sliding_Play();
                     dashDown.Play();
                 }
                 if (moveInput.y > 0)
                 {
-                    slidingSound.Play();
+                    SoundManager.instance.Sliding_Play();
                     dashUp.Play();
                 }
                 if (moveInput.x < 0)
                 {
-                    slidingSound.Play();
+                    SoundManager.instance.Sliding_Play();
                     dashLeft.Play();
                 }
                 if (moveInput.x > 0)
                 {
-                    slidingSound.Play();
+                    SoundManager.instance.Sliding_Play();
                     dashRight.Play();
                 }
             }
@@ -136,7 +128,7 @@ public class PlayerController : MonoBehaviour
             {
                 activeMoveSpeed = moveSpeed;
                 dashCoolCounter = dashCooldown;
-                slidingSound.Stop();
+                SoundManager.instance.Sliding_Stop();
                 dashUp.Stop();
                 dashDown.Stop();
                 dashLeft.Stop();
@@ -154,15 +146,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A) && playerhealth.Health > 0)
         {
-            if (!attackSound.isPlaying)
-            {
-                attackSound.Play();
-            }
-            moveSound.Stop();
+            SoundManager.instance.Attack_Play();
+
+            SoundManager.instance.Move_Stop();
         }
         else
         {
-            attackSound.Stop();
+            SoundManager.instance.Attack_Stop();
         }
 
         if (Input.GetKey(KeyCode.A) && playerhealth.Health > 0)
