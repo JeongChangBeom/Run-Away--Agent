@@ -9,7 +9,6 @@ public class PlayerHealth : MonoBehaviour
     private Animator anim;
 
     public int Health = 5;
-    public GameManager gameManager;
     private PlayerController playerController;
 
     void Start()
@@ -42,6 +41,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void ChangeScript()
     {
-        gameManager.EndGame();
+        GameManager.instance.EndGame();
     }
 }

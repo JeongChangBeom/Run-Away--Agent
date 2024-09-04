@@ -31,6 +31,30 @@ public class GameManager : MonoBehaviour
 
     public int itemX1, itemX2, itemY1, itemY2;
 
+    public static GameManager instance
+    {
+        get
+        {
+            if (m_instance == null)
+            {
+                m_instance = FindObjectOfType<GameManager>();
+            }
+            return m_instance;
+        }
+    }
+
+    private static GameManager m_instance;
+
+    private void Awake()
+    {
+        {
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
 
     void Start()
     {
@@ -131,7 +155,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        //stageBgm.Stop();
+        SoundManager.instance.Bgm_Stop();
 
         isDead = true;
 
