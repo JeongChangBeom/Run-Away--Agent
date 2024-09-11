@@ -4,30 +4,20 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    Vector3 targetPos;
-    Vector3 myPos;
-    Vector3 newPos;
-
-    public float speed = 0.003f;
+    public float speed;
 
     void Start()
     {
-        targetPos = GameObject.Find("Player").transform.position;
-        myPos = transform.position;
+        GetComponent<Rigidbody2D>().AddForce(transform.right * speed, ForceMode2D.Impulse);
 
-        newPos = (targetPos - myPos) * speed;
 
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 10f);
     }
-    void FixedUpdate()
-    {
-        transform.position = transform.position + newPos;
-    }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(gameObject);
+
         if (other.tag == "Player")
         {
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
