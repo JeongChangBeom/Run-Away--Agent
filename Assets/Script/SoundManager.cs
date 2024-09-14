@@ -43,6 +43,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource Heal_Audio;
     public AudioClip Heal;
 
+    public float bgmVolume = 1.0f;
+    public float sfxVolume = 1.0f;
 
     public static SoundManager instance
     {

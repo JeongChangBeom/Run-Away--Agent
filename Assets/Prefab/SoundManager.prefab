@@ -67,3 +67,9 @@ MonoBehaviour:
   Attack: {fileID: 8300000, guid: 7c34ee39eccf4c54ba97492a1eae3f6b, type: 3}
   Barrier_Audio: {fileID: 0}
   Barrier: {fileID: 8300000, guid: e77e45357aaea094793a8e455443d16a, type: 3}
+  Destroy_Audio: {fileID: 0}
+  Destroy_Clip: {fileID: 8300000, guid: d0d319dc9f25d1b45a7e9bea8d26654e, type: 3}
+  Heal_Audio: {fileID: 0}
+  Heal: {fileID: 8300000, guid: 887181fca500f2f4fb6afd110d22dde4, type: 3}
+  bgmVolume: 1
+  sfxVolume: 1
